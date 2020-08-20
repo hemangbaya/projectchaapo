@@ -477,7 +477,7 @@ app.post('/change-password', bodyParser.json(), (req, res)=>{
                     forpass.insertOne({email: req.body.email, passString: passstr});
                 }
                 if (!err) {
-                    sendMail("conf437@gmail.com", "jttuhxskvcgzqiyk" , `${req.body.email}`, "Change Password at project chapoo.com", `Following is the link to rest your password - <a href="http://localhost:4200/changepassword?user=${req.body.email}&passString=${passstr}">Reset Password</a>` )
+                    sendMail("conf437@gmail.com", "jttuhxskvcgzqiyk" , `${req.body.email}`, "Change Password at project chapoo.com", `Following is the link to rest your password - <a href="http://projectchaapo.herokuapp.com/changepassword?user=${req.body.email}&passString=${passstr}">Reset Password</a>` )
                     
                 }
             })
